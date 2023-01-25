@@ -1,9 +1,8 @@
 .carousel {
   background-size: cover;
   background-repeat: no-repeat;
-  padding: $padding-section-min-x $padding-section-min-y;
   &__controls {
-    // padding-left: 100px;
+    padding: $padding-section-min-x $padding-section-min-y;
     h3 {
       font-size: 50px;
       font-weight: normal;
@@ -104,6 +103,7 @@
     height: auto;
     transition: 2s all;
     scroll-behavior: smooth;
+    padding-left: $padding-section-min-x;
     &__item {
       position: relative;
       border-radius: 21px;

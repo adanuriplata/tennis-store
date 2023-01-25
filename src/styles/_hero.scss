@@ -2,20 +2,20 @@
   position: relative;
   overflow: hidden;
   section {
-    height: 500px;
+    height: 685px;
 
     @include sm {
-      height: 400px;
-    }
-    @include md {
-      height: 350px;
-    }
-    @include lg {
-      height: 686px;
-    }
-    @include xl {
       height: 785px;
     }
+    // @include md {
+    //   height: 350px;
+    // }
+    // @include lg {
+    //   height: 785px;
+    // }
+    // @include xl {
+    //   height: 785px;
+    // }
   }
   picture {
     transition-property: all;
@@ -37,8 +37,10 @@
       scaleY(var(--tw-scale-y));
   }
   img {
-    height: inherit;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
+    // object-position: left;
   }
   &__content {
     padding: $padding-section-min-x $padding-section-min-y;
