@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   padding: $padding-section-min-x $padding-section-min-y;
   &__controls {
-    padding-left: 100px;
+    // padding-left: 100px;
     h3 {
       font-size: 50px;
       font-weight: normal;
@@ -26,6 +26,107 @@
       line-height: 1.67;
       letter-spacing: 0.51px;
       color: #fff;
+    }
+    &__panel {
+      max-width: 120px;
+      padding: 14px 0;
+      .container-bullets {
+        padding-bottom: 35.2px;
+        display: flex;
+        justify-content: space-between;
+        &__item {
+          width: 8px;
+          height: 7.8px;
+          background-color: rgba(255, 255, 255, 0.5);
+          content: ' ';
+          border-radius: 4px;
+          transition: all 0.4s;
+        }
+        .activeSlide {
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
+      .container-buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__button {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: $sickly-yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        &:hover {
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25),
+            0 8px 8px rgba(0, 0, 0, 0.22);
+        }
+        .next {
+          transform: rotate(90deg);
+        }
+        .prev {
+          transform: rotate(-90deg);
+        }
+      }
+      &__button-empty {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: solid white 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: no-drop;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        .next {
+          transform: rotate(90deg);
+        }
+        .prev {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+  &__slides {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 16px;
+    height: auto;
+    transition: 2s all;
+    scroll-behavior: smooth;
+    &__item {
+      position: relative;
+      border-radius: 21px;
+      display: inline-block;
+      margin-right: 36px;
+      &__image {
+        height: 100%;
+      }
+      &__content {
+        margin-top: 11px;
+        margin-left: 17px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 39px;
+        height: 39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 50%;
+        background-color: $sickly-yellow;
+      }
     }
   }
 }

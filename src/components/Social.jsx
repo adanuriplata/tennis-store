@@ -26,7 +26,7 @@ export const Social = () => {
           height="33"
           viewBox="0 0 33 33"
         >
-          <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+          <g fill="none" fillRule="evenodd" transform="translate(1 1)">
             <circle
               cx="15.5"
               cy="15.5"
@@ -49,7 +49,7 @@ export const Social = () => {
           height="33"
           viewBox="0 0 33 33"
         >
-          <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+          <g fill="none" fillRule="evenodd" transform="translate(1 1)">
             <g fill="#FFF">
               <path
                 fillRule="nonzero"
@@ -61,7 +61,7 @@ export const Social = () => {
               cx="15.5"
               cy="15.5"
               r="15.5"
-              fill-rule="nonzero"
+              fillRule="nonzero"
               stroke="#FFF"
             />
           </g>
@@ -74,7 +74,7 @@ export const Social = () => {
           height="33"
           viewBox="0 0 33 33"
         >
-          <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+          <g fill="none" fillRule="evenodd" transform="translate(1 1)">
             <circle
               cx="15.5"
               cy="15.5"
@@ -101,7 +101,7 @@ export const Social = () => {
               cx="15.5"
               cy="15.5"
               r="15.5"
-              fill-rule="nonzero"
+              fillRule="nonzero"
               stroke="#FFF"
             />
             <path
