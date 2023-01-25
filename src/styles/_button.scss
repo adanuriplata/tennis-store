@@ -1,0 +1,33 @@
+.button {
+  min-width: 200px;
+  // height: 53px;
+  margin: 49px 0 0;
+  padding: 15px 20px;
+  border-radius: 26.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  @include sm {
+    min-width: 234px;
+    padding: 15px 38px;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__text {
+      font-size: 11px;
+      @include sm {
+        font-size: 13px;
+      }
+    }
+  }
+}
+.b-white {
+  color: #fff;
+  border: solid 1px #fff;
+}
+.b-dark {
+  color: #273048;
+  border: solid 1px #282e47;
+}

@@ -1,0 +1,49 @@
+.cta {
+  background-color: #f3f4f8;
+  padding: $padding-section-min-x $padding-section-min-y;
+  @include md {
+    padding: 72px 168px;
+  }
+  @include lg {
+    display: flex;
+    // padding: 72px 168px 67px 255px;
+    padding: 67px 255px;
+  }
+  .yellow {
+    color: $sickly-yellow;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: 1.87px;
+  }
+  &__content {
+    max-width: 555px;
+    h2 {
+      font-size: 30px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.14;
+      letter-spacing: -0.06px;
+      color: $dark;
+      @include sm {
+        font-size: 40px;
+      }
+      @include md {
+        font-size: 50px;
+      }
+    }
+    p {
+      font-size: 15px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.78;
+      letter-spacing: 0.51px;
+      color: #787878;
+      @include md {
+        font-size: 18px;
+      }
+    }
+  }
+}

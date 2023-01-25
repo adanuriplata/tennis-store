@@ -1,0 +1,27 @@
+.footer {
+  background-color: $sickly-yellow;
+  text-align: center;
+  justify-content: space-between;
+  padding: $padding-section-min-x $padding-section-min-y;
+  @include md {
+    display: flex;
+    padding: 64px 63px 58px 78px;
+  }
+  align-items: center;
+  &__social-container div {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    padding: 5px 0 12px 0;
+    cursor: pointer;
+    justify-content: space-evenly;
+    @include sm {
+      width: 40%;
+    }
+    @include md {
+      width: 210px;
+      justify-content: none;
+      margin: 0;
+    }
+  }
+}

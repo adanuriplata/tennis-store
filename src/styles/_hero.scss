@@ -1,0 +1,84 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  section {
+    height: 500px;
+
+    @include sm {
+      height: 400px;
+    }
+    @include md {
+      height: 350px;
+    }
+    @include lg {
+      height: 686px;
+    }
+    @include xl {
+      height: 785px;
+    }
+  }
+  picture {
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x))
+      translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
+      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+      scaleY(var(--tw-scale-y));
+  }
+  img {
+    height: inherit;
+    object-fit: cover;
+  }
+  &__content {
+    padding: $padding-section-min-x $padding-section-min-y;
+    position: absolute;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    color: white;
+    transition: all 0.7s;
+    &.open {
+      background-color: $dark;
+      position: fixed;
+      z-index: 200;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        margin: 0 2px;
+        font-size: 13px;
+      }
+    }
+    h1 {
+      font-weight: normal;
+      font-size: 38px;
+      line-height: 1.28;
+      letter-spacing: -0.05px;
+      max-width: 60%;
+      @include sm {
+        font-size: 45px;
+        max-width: 65%;
+      }
+      @include md {
+        font-size: 53px;
+        max-width: 709px;
+      }
+      span {
+        color: $sickly-yellow;
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+.menu {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  @include sm {
+    font-size: 16px;
+  }
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+}
+.m-white {
+  ul {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    li {
+      padding: 6px 0;
+      a {
+        color: white;
+        transition: 0.5s;
+        position: relative;
+        display: block;
+        padding: 10px 0;
+        &::after {
+          position: absolute;
+          content: '';
+          width: 17px;
+          height: 2px;
+          top: 100%;
+          left: 0;
+          background: white;
+          transition: transform 0.5s;
+          transform: scaleX(0);
+          transform-origin: right;
+        }
+        &:hover {
+          color: white;
+          &::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+  }
+}
+.m-dark {
+  ul {
+    letter-spacing: 1.14px;
+    width: 100%;
+    @include sm {
+      width: 350px;
+    }
+    @include md {
+      width: 451px;
+    }
+    li {
+      a {
+        font-size: 13px;
+        color: $dark-two;
+        &::after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 1px;
+          top: 100%;
+          left: 0;
+          background: black;
+          transition: transform 0.5s;
+          transform: scaleX(0);
+          transform-origin: right;
+        }
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+.m-mobile {
+  width: 0;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  z-index: 50;
+  transition: all 0.5s ease-in-out;
+
+  &.open {
+    width: 100%;
+    background-color: $sickly-yellow;
+  }
+  &__social-container {
+    padding-left: 30px;
+    div {
+      display: flex;
+      max-width: 200px;
+      justify-content: space-between;
+    }
+  }
+  ul {
+    width: 350px;
+    justify-content: space-between;
+    padding-left: 30px;
+    li {
+      padding: 6px 0;
+      list-style: none;
+      a {
+        color: $dark-two;
+        transition: 0.5s;
+        position: relative;
+        display: block;
+        padding: 10px 0;
+        &::after {
+          position: absolute;
+          content: '';
+          width: 17px;
+          height: 2px;
+          top: 100%;
+          left: 0;
+          background: $dark-two;
+          transition: transform 0.5s;
+          transform: scaleX(0);
+          transform-origin: right;
+        }
+        &:hover {
+          color: $dark-two;
+          &::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+  }
+  &__ball {
+    padding-top: 10px;
+    border-bottom: solid 1px white;
+    transition: transform 0.4s;
+    transform: scaleX(2);
+    svg {
+      margin-bottom: 5px;
+      margin-left: 30px;
+    }
+  }
+  & .return-ball {
+    transform: scaleX(1);
+  }
+}
+.menu-button-mobile {
+  width: 30px;
+  height: 15px;
+  position: relative;
+  margin: 5px 0;
+  padding-bottom: 10px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  .line-button {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  div:nth-child(1) {
+    top: 0px;
+  }
+  div:nth-child(2) {
+    top: 9px;
+  }
+  div:nth-child(3) {
+    top: 18px;
+  }
+  &.open div:nth-child(1) {
+    top: 9px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  &.open div:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  &.open div:nth-child(3) {
+    top: 9px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+}
