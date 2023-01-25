@@ -8,7 +8,6 @@ export const Banner = () => {
     <div className="banner">
       <section>
         <picture>
-          {/* <img src={Img1}></img> */}
           <img src={Img1} srcSet={`${Img2} 2x, ${Img3} 3x`}></img>
         </picture>
       </section>
