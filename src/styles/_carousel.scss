@@ -3,6 +3,10 @@
   background-repeat: no-repeat;
   &__controls {
     padding: $padding-section-min-x $padding-section-min-y;
+    @include lg {
+      padding-left: 200px;
+      padding-right: 27px;
+    }
     h3 {
       font-size: 50px;
       font-weight: normal;
@@ -104,6 +108,11 @@
     transition: 2s all;
     scroll-behavior: smooth;
     padding-left: $padding-section-min-x;
+    @include lg {
+      padding-top: 51px;
+      padding-bottom: 73px;
+      padding-left: 52px;
+    }
     &__item {
       position: relative;
       border-radius: 21px;
@@ -128,5 +137,17 @@
         background-color: $sickly-yellow;
       }
     }
+  }
+}
+.isMobileCa {
+  display: block;
+  @include lg {
+    // display: none;
+  }
+}
+.isDesktopCa {
+  // display: none;
+  @include lg {
+    display: flex;
   }
 }

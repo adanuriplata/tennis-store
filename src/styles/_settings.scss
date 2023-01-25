@@ -1,29 +1,19 @@
 @font-face {
   font-family: HelveticaNeue;
   src: local(HelveticaNeue),
-    url(/assets/fonts/HelveticaNeue.woff2) format('woff2'),
-    url(/assets/fonts/HelveticaNeue.woff) format('woff'),
-    url(/assets/fonts/HelveticaNeue.ttf) format('truetype');
+    url(../assets/fonts/HelveticaNeue.woff2) format('woff2'),
+    url(../assets/fonts/HelveticaNeue.woff) format('woff');
+  // url(/assets/fonts/HelveticaNeue.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
 }
 @font-face {
   font-family: HelveticaNeue;
-  src: local(HelveticaNeue-Medium),
-    url(/assets/fonts/HelveticaNeue-Medium.woff2) format('woff2'),
-    url(/assets/fonts/HelveticaNeue-Medium.woff) format('woff'),
-    url(/assets/fonts/HelveticaNeue-Medium.ttf) format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-}
-@font-face {
-  font-family: HelveticaNeue;
   src: local(HelveticaNeue-Bold),
-    url(/assets/fonts/HelveticaNeue-Bold.woff2) format('woff2'),
-    url(/assets/fonts/HelveticaNeue-Bold.woff) format('woff'),
-    url(/assets/fonts/HelveticaNeue-Bold.ttf) format('truetype');
+    url(../assets/fonts/HelveticaNeue-Bold.woff2) format('woff2'),
+    url(../assets/fonts/HelveticaNeue-Bold.woff) format('woff');
+  // url(/assets/fonts/HelveticaNeue-Bold.ttf) format('truetype');
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -36,17 +26,6 @@ $font-size: 18px;
 $main-font: 'HelveticaNeue', sans-serif;
 
 //Font-sizes
-$h1-size: 32px;
-$h2-size: 30px;
-$h3-size: 28px;
-$menu-size: 14px;
-$min: 13px;
-$taller-data: 13px;
-$taller-title: 15px;
-$taller-price: 18px;
-$footer-title: 19px;
-$footer-content: 15px;
-$footer-copy: 12px;
 
 //gutters
 $padding-section-min-x: 35px;
@@ -58,26 +37,6 @@ $sickly-yellow: #cbe346;
 $white-two: #d8d8d8;
 $dark-two: #2b3049;
 $dark: #1e2335;
-
-// $main: #fde236;
-// $main-l: #ffff6d;
-// $main-d: #c6b000;
-// $secondary: #f5f5f5;
-// $secondary-l: #ffffff;
-// $secondary-d: #c2c2c2;
-// $black: rgba(0, 0, 0, 0.7);
-// $text-m: #000000;
-// $text-s: #000000;
-// $text-g: #494949;
-// $hove-whatsapp: #22ae96;
-
-// $bg-input-form: rgba(253, 226, 54, 0.9);
-// $amarillo: #fde236;
-// $amarillo-d: #c6b000;
-// $amarillo-l: #ffff6d;
-// $black-site: #f5f5f5;
-// $white: #f7f8fa;
-// $black-text: #494949;
 
 //BreakPoints Media queries
 
@@ -122,8 +81,8 @@ $screen-xl-min: 1340px;
 }
 
 // Custom devices
-@mixin cust($screen) {
-  @media (min-width: $screen+'px') {
-    @content;
-  }
-}
+// @mixin cust($screen) {
+//   @media (min-width: $screen + 'px') {
+//     @content;
+//   }
+// }
