@@ -3,19 +3,9 @@
   overflow: hidden;
   section {
     height: 685px;
-
     @include sm {
       height: 785px;
     }
-    // @include md {
-    //   height: 350px;
-    // }
-    // @include lg {
-    //   height: 785px;
-    // }
-    // @include xl {
-    //   height: 785px;
-    // }
   }
   picture {
     transition-property: all;
@@ -40,13 +30,12 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    // object-position: left;
   }
   &__content {
-    padding: $padding-section-min-x $padding-section-min-y;
     position: absolute;
     height: auto;
     bottom: 0;
+    width: 100%;
     top: 0;
     color: white;
     transition: all 0.7s;
@@ -59,12 +48,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       span {
-        margin: 0 2px;
         font-size: 13px;
+        &:first-child {
+          margin-right: 15px;
+        }
       }
     }
     h1 {
+      padding-top: 56px;
       font-weight: normal;
       font-size: 38px;
       line-height: 1.28;
@@ -75,12 +68,52 @@
         max-width: 65%;
       }
       @include md {
+        padding-top: 180px;
+        margin-bottom: 0;
         font-size: 53px;
         max-width: 709px;
       }
       span {
         color: $sickly-yellow;
       }
+    }
+  }
+  .vertical-hero {
+    display: flex;
+    height: 100%;
+    &__container-ball {
+      padding-top: 25px;
+      padding-left: 36px;
+      padding-right: 32px;
+      margin-right: 67px;
+      border-right: solid 2px white;
+      display: none;
+      @include lg {
+        display: block;
+      }
+    }
+  }
+  .vertical-hero__container-content {
+    padding: $padding-section-min-x $padding-section-min-y;
+    @include lg {
+      width: 950px;
+      padding-left: 0;
+    }
+    @include xl {
+      width: 1160px;
+    }
+  }
+  .isMobile {
+    display: block;
+    @include lg {
+      display: none;
+    }
+  }
+  .isDesktop {
+    display: none;
+    width: 579px;
+    @include lg {
+      display: block;
     }
   }
 }

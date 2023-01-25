@@ -19,6 +19,11 @@
     display: flex;
     width: 350px;
     justify-content: space-between;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    @include lg {
+      width: 100%;
+    }
     li {
       padding: 6px 0;
       a {
@@ -54,11 +59,10 @@
   ul {
     letter-spacing: 1.14px;
     width: 100%;
-    @include sm {
-      width: 350px;
-    }
     @include md {
       width: 451px;
+      display: flex;
+      justify-content: space-between;
     }
     li {
       a {

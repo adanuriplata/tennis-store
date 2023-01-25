@@ -6,7 +6,10 @@
   }
   @include lg {
     display: flex;
-    // padding: 72px 168px 67px 255px;
+    justify-content: space-between;
+    padding: 57px 110px;
+  }
+  @include xl {
     padding: 67px 255px;
   }
   .yellow {
@@ -17,8 +20,16 @@
     line-height: 2;
     letter-spacing: 1.87px;
   }
+  &__tennis {
+    @include lg {
+      padding-top: 45px;
+    }
+  }
   &__content {
     max-width: 555px;
+    @include lg {
+      margin-left: 31px;
+    }
     h2 {
       font-size: 30px;
       font-weight: normal;
@@ -29,7 +40,7 @@
       @include sm {
         font-size: 40px;
       }
-      @include md {
+      @include lg {
         font-size: 50px;
       }
     }
@@ -45,5 +56,8 @@
         font-size: 18px;
       }
     }
+  }
+  &__button {
+    align-self: flex-end;
   }
 }

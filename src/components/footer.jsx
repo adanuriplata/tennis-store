@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       <div>
-        <Menu isDark={true} />
+        <Menu isFooter />
         <div className="footer__social-container">
           <Social />
         </div>

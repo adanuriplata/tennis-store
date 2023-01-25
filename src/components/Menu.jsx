@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Social } from './Social';
 import { useUiContext } from '../context/UiContext';
-export const Menu = ({ isDark, isMobile }) => {
+export const Menu = ({ isFooter }) => {
   const { openMenu, setOpenMenu } = useUiContext();
   const [effectBallReturn, setEffectBallReturn] = useState(false);
   const menu = [
@@ -32,9 +32,23 @@ export const Menu = ({ isDark, isMobile }) => {
     }
   }, [openMenu]);
 
-  if (isMobile) {
+  if (isFooter) {
     return (
-      <div>
+      <div className="m-dark menu isDesktop">
+        <ul>
+          {menu.map((e, index) => (
+            <li key={index}>
+              <a href={e.to}>{e.text}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div className="isMobile">
         <div
           onClick={() => setOpenMenu(!openMenu)}
           className={`${openMenu ? 'open' : ''} menu-button-mobile`}
@@ -44,7 +58,6 @@ export const Menu = ({ isDark, isMobile }) => {
           <div className="line-button"></div>
         </div>
         <div className={`${openMenu ? 'open' : ''} m-mobile`}>
-          {/* <div className="m-mobile__ball return-ball"> */}
           <div
             className={`${
               effectBallReturn ? 'return-ball' : ''
@@ -63,6 +76,7 @@ export const Menu = ({ isDark, isMobile }) => {
               />
             </svg>
           </div>
+
           <ul>
             {menu.map((e, index) => (
               <li key={index}>
@@ -75,18 +89,15 @@ export const Menu = ({ isDark, isMobile }) => {
           </div>
         </div>
       </div>
-    );
-  }
-
-  return (
-    <div className={`${isDark ? 'm-dark' : 'm-white'} menu`}>
-      <ul>
-        {menu.map((e, index) => (
-          <li key={index}>
-            <a href={e.to}>{e.text}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div className="m-white menu isDesktop">
+        <ul>
+          {menu.map((e, index) => (
+            <li key={index}>
+              <a href={e.to}>{e.text}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 };
